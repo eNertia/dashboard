@@ -7,36 +7,39 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/dashboard.css">
     <script src="js/jquery.min.js"> </script>
-        
-    <!-- ShakeBorder Plugin -->
-    <link rel="stylesheet" href="css/ShakeBorder.css">
-    <script src="js/ShakeBorder.js"></script>
     
     <!-- Gridster Plugin -->
     <link rel="stylesheet" href="css/jquery.gridster.min.css">
     <script src="js/jquery.gridster.min.js"></script>
+    
+    <!-- Jquery Background Position Plugin -->
+    <script src="js/jquery.backgroundpos.min.js"></script>
 </head>
 <body>
- 
+	
+	<div class="header">
+	  <img src="img/EnertiaDashboard.png"/>
+  </div>
+  
  <div class="dashboard">
    <div class="gridster">
     <ul>
         <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-        	<img class="ShakeAndBorder" alt="Test"  src="img/avatar.png" />
+        	<a href="https://crms.enertiagroup.com">CRMS</a>
         </li>
         <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
-        	<img class="ShakeAndBorder" alt="Test2" src="img/avatar.png" />
+        	<a href="https://wms.enertiagroup.com">WMS</a>
         </li>
         <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-        	<img class="ShakeAndBorder" alt="Test3" src="img/avatar.png" />
+        	<a href="https://punchclock.enertiagroup.com">PunchClock</a>
         </li>
     </ul>
+   </div>
   </div>
-</div>
  
   <!-- Initialize ShakeBorder Plugin -->
   <script>
-    $('.ShakeAndBorder').ShakeBorder({ border: false});
+    //$('.ShakeAndBorder').ShakeBorder({ border: false });
   </script>
   
   <!-- Initialize Gridster Plugin -->
@@ -49,7 +52,26 @@
         min_cols: 6,
       });
 
+    moveBgAround();
+
 	});
+	
+	function moveBgAround() {
+      //give a random value from 0 to 400 for the X axis and the Y axis
+      var x = Math.floor(Math.random()*401);
+      var y = Math.floor(Math.random()*401);
+
+      //random generated time it takes to move
+      var time = Math.floor(Math.random()*1001) + 2000;
+
+      //make the background image move!
+      $('.header').animate({
+        backgroundPosition: '' + (x * -1) + 'px ' + (y * -1) + 'px'
+        
+      }, time, "swing", function() {
+      moveBgAround();
+      });
+	}
   </script>
   
 </body>

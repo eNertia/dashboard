@@ -1,6 +1,29 @@
+html {
+    background-color: #d6ffd4;
+}
+
+.header {
+    background-image: url(../img/bokeh.jpg);
+    background-color: #000000;
+    margin: 0 auto;
+    width: 1136px;
+    height: 160px;
+}
+
+.header img {
+    display: block;
+}
+
 .dashboard {
     margin: 3em 0;
     padding: 7.5em 0 5.5em;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(8%, rgba(255,255,255,1)), color-stop(100%, rgba(214,255,212,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
 }
 
 .gridster {
@@ -10,14 +33,32 @@
 
 .gridster .gs-w {
     cursor: pointer;
-    -webkit-box-shadow: 0 0 5px rgba(0,0,0,0.3);
-    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+
 }
 
 ul {
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 25px;
+    border-color: #ADFF0D;
+    background-color: rgba(255, 255, 255, 0.44);
     
 }
 
 ul, ol {
     list-style: none;
+    text-align: center;
+}
+
+h1 { 
+    color: #fff; 
+    font-family: 'Righteous'; 
+    font-size: 65px; 
+    font-weight: normal; 
+    line-height: 60px; 
+    margin: 10px 0 20px; 
+    text-transform: uppercase; 
+    text-shadow: 2px 2px 0 #000;
+    margin: 10px 0 24px; 
+    text-align: center; 
 }
