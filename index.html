@@ -5,22 +5,51 @@
 <title>Dashboard</title>
     <!-- Bootstrap and JQuery -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <script src="js/jquery.min.js"> </script>
         
-    <!-- Plugin -->
+    <!-- ShakeBorder Plugin -->
     <link rel="stylesheet" href="css/ShakeBorder.css">
     <script src="js/ShakeBorder.js"></script>
+    
+    <!-- Gridster Plugin -->
+    <link rel="stylesheet" href="css/jquery.gridster.min.css">
+    <script src="js/jquery.gridster.min.js"></script>
 </head>
 <body>
-
-  <img class="ShakeAndBorder" alt="Test"  src="img/avatar.png" />
-
-  <img class="ShakeAndBorder" alt="Test2" src="img/avatar.png" />
-
-  <img class="ShakeAndBorder" alt="Test3" src="img/avatar.png" />
-  
+ 
+ <div class="dashboard">
+   <div class="gridster">
+    <ul>
+        <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+        	<img class="ShakeAndBorder" alt="Test"  src="img/avatar.png" />
+        </li>
+        <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+        	<img class="ShakeAndBorder" alt="Test2" src="img/avatar.png" />
+        </li>
+        <li data-row="1" data-col="3" data-sizex="1" data-sizey="1">
+        	<img class="ShakeAndBorder" alt="Test3" src="img/avatar.png" />
+        </li>
+    </ul>
+  </div>
+</div>
+ 
+  <!-- Initialize ShakeBorder Plugin -->
   <script>
-    $('.ShakeAndBorder').ShakeBorder();
+    $('.ShakeAndBorder').ShakeBorder({ border: false});
+  </script>
+  
+  <!-- Initialize Gridster Plugin -->
+  <script>
+  	$(function(){ //DOM Ready
+
+      $(".gridster > ul").gridster({
+        widget_margins: [10, 10],
+        widget_base_dimensions: [140, 140],
+        min_cols: 6,
+      });
+
+	});
   </script>
   
 </body>
