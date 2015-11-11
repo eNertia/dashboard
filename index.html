@@ -39,54 +39,54 @@
       <img alt="Art by Paul Davey" src="img/tree.png"/>
     </div>  
       
-    <div class="grid-stack" >
+    <div class="grid-stack" data-gs-width="12">
       <!-- CRMS Shortcut -->
       <div class="grid-stack-item" 
-        data-gs-x="0" data-gs-y="0" 
-        data-gs-width="1" data-gs-height="1">
+        data-gs-x="1" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-          <i class="fa fa-rocket fa-5x"></i> <br/>
+          <span class="fa fa-rocket"></span>
           <a href="https://crms.enertiagroup.com" target="_blank">CRMS</a>
         </div>
       </div>
       
       <!-- WMS Shortcut -->
       <div class="grid-stack-item" 
-        data-gs-x="1" data-gs-y="0" 
-        data-gs-width="1" data-gs-height="1">
+        data-gs-x="3" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-          <i class="fa fa-connectdevelop fa-5x"></i> <br/>
+          <span class="fa fa-connectdevelop"></span>
           <a href="https://wms.enertiagroup.com" target="_blank">WMS</a>            
         </div>
       </div>
       
       <!-- Med eInfo Shortcut -->
       <div class="grid-stack-item" 
-        data-gs-x="2" data-gs-y="0" 
-        data-gs-width="1" data-gs-height="1">
+        data-gs-x="5" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-          <i class="fa fa-plus fa-5x"></i> <br/>
+          <span class="fa fa-plus"></span>
           <a href="http://www.medeinfo.com" target="_blank">Med eInfo</a>       
         </div>
       </div>
       
       <!-- PunchClock Shortcut -->
       <div class="grid-stack-item" 
-        data-gs-x="3" data-gs-y="0" 
-        data-gs-width="1" data-gs-height="1">
+        data-gs-x="7" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-          <i class="fa fa-clock-o fa-5x"></i> <br/>
+          <span class="fa fa-clock-o"></span>
           <a href="http://punchclock.enertiagroup.com" target="_blank">PunchClock</a>           
         </div>
       </div>      
       
       <!-- Helpdesk Shortcut -->
       <div class="grid-stack-item" 
-        data-gs-x="4" data-gs-y="0" 
-        data-gs-width="1" data-gs-height="1">
+        data-gs-x="9" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-          <i class="fa fa-heartbeat fa-5x" style="color: red;"></i> <br/>
-          <a href="http://help.enertiagroup.com" target="_blank">Helpdesk</a>        
+          <span class="fa fa-heartbeat fa-5x" style="color: red;"></span>
+          <a href="http://help.enertiagroup.com" target="_blank">Helpdesk</a>
         </div>
       </div>
       
@@ -96,10 +96,8 @@
 <script type="text/javascript">
   $(function () {
     var options = {
-      cell_height: 100,
-      vertical_margin: 10,
+      width: 12,
       animate: true,
-      resizable: ( {disabled: true} )   
     };
   $('.grid-stack').gridstack(options);
   });

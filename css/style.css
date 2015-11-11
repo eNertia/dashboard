@@ -37,6 +37,12 @@ html {
 
 .grid-stack-item-content {
     color: green;
-    padding-top: 5px;
     text-align: center;
+    font-size: 20px;
+}
+
+.grid-stack-item-content .fa {
+    font-size: 64px;
+    display: block;
+    margin: 20px 0 10px;
 }
