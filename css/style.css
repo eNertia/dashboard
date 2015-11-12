@@ -1,29 +1,26 @@
-html {
-    background-color: #d6ffd4;
-}
-
 .header {
+    position: relative;
+    width: auto;
     margin: 0 auto;
-    width: 1136px;
-    height: 160px;    
+    text-align: center;
+    font-family: 'Loved by the King', cursive;
 }
 
-.dashboard {
-    margin: 3em 0;
-    padding: 7.5em 0 5.5em;
-    background: rgba(255,255,255,1);
-    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(8%, rgba(255,255,255,1)), color-stop(100%, rgba(214,255,212,1)));
-    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
-    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
-    background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
-    background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 8%, rgba(214,255,212,1) 100%);
+.responsiveText-wrapper {
+    font-weight: bold;
+}
+
+body {
+    background-image: url("../img/stripes.png");
+    background-repeat: repeat;
+    font-family: 'Loved by the King', cursive;
+    font-weight: bold;
 }
 
 .tree {
     position: fixed;
     bottom: 0px;
-    right: 0px;    
+    right: -25px;;
 }
 
 .grid-stack {
@@ -38,11 +35,15 @@ html {
 .grid-stack-item-content {
     color: green;
     text-align: center;
-    font-size: 20px;
+    font-size: 35px;
 }
 
 .grid-stack-item-content .fa {
     font-size: 64px;
     display: block;
     margin: 20px 0 10px;
+}
+
+.grid-stack > .grid-stack-item > .grid-stack-item-content {
+    overflow: visible;
 }
