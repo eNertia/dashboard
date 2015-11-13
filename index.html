@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Font Awesome Stylesheet https://fortawesome.github.io/Font-Awesome/ -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <!-- Gridstack Stylesheet -->
-  <link rel="stylesheet" href="css/gridstack.css">
-  <!-- Enertia Dashboard Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
-  
   <!-- Header font via Google Webfonts -->
   <link href='https://fonts.googleapis.com/css?family=Loved+by+the+King|Indie+Flower' rel='stylesheet' type='text/css'>
+  <!-- Gridstack Stylesheet -->
+  <link rel="stylesheet" href="css/gridstack.css">
+  <!-- Avgrund Styleshet http://labs.voronianski.com/jquery.avgrund.js/ -->
+  <link rel="stylesheet" href="css/avgrund.css">
+  <!-- Enertia Dashboard Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
   
   <!-- jQuery Library http://jquery.com/ -->
   <script src="js/jquery.min.js"></script>
@@ -30,6 +31,8 @@
   <script src="js/gridstack.js"></script>
   <!-- responsiveText Library https://github.com/ghepting/jquery-responsive-text -->
   <script src="js/jquery.responsiveText.js"></script>
+  <!-- Avgrund Library for modal daily reminders -->
+  <script src="js/jquery.avgrund.min.js"></script>
   
 </head>
 <body>
@@ -45,15 +48,46 @@
     
     <!-- Responsive Header -->
     <div class="header">
-      <h1 class="responsive" data-compression="8" data-min="20" data-max="60">Enertia Tree</h1>      
+      <h1 class="responsive" data-compression="8" data-min="20" data-max="60">Enertia Tree</h1> 
+      <marquee behavior="scroll" direction="left" style="font-size: x-large;">Eisai will be visiting our facility on Tuesday, November 17, 2015.  This is the first time they are visiting this facility so let us ensure that EVERYTHING looks fabulous.</marquee>
     </div>
     
     <!-- GridStack Dashboard -->  
     <div class="grid-stack" data-gs-width="12">
       
+      <!-- Enertia Website Shortcut -->
+      <div class="grid-stack-item" 
+        data-gs-x="3" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
+        <div class="grid-stack-item-content">
+          <span class="fa fa-anchor fa-5x" style="color: #179A48;"></span>
+          <a href="http://www.enertiagroup.com/" target="_blank">Enertia</a>
+        </div>
+      </div>
+      
+      <!-- EGM Website Shortcut -->
+      <div class="grid-stack-item" 
+        data-gs-x="5" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
+        <div class="grid-stack-item-content">
+          <span class="fa fa-suitcase fa-5x" style="color: #8A2BE2;"></span>
+          <a href="http://www.egminc.net/" target="_blank">EGM</a>
+        </div>
+      </div>
+      
+      <!-- Helpdesk Shortcut -->
+      <div class="grid-stack-item" 
+        data-gs-x="7" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-width="2" data-gs-height="2">
+        <div class="grid-stack-item-content">
+          <span class="fa fa-heartbeat fa-5x" style="color: red;"></span>
+          <a href="https://app.smartsheet.com/b/form?EQBCT=e3b3d4ec4834432aa4dad89973b27dc8" target="_blank">Helpdesk</a>
+        </div>
+      </div>      
+      
       <!-- CRMS Shortcut -->
       <div class="grid-stack-item"
-        data-gs-x="1" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-x="3" data-gs-y="2" data-gs-no-resize="yes"
         data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
           <span class="fa fa-rocket" style="color: #FFA500;"></span>
@@ -63,27 +97,17 @@
       
       <!-- WMS Shortcut -->
       <div class="grid-stack-item" 
-        data-gs-x="3" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-x="5" data-gs-y="2" data-gs-no-resize="yes"
         data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-          <span class="fa fa-connectdevelop" style="color: #800080;"></span>
+          <span class="fa fa-connectdevelop" style="color: #FF69B4;"></span>
           <a href="https://wms.enertiagroup.com" target="_blank">WMS</a>            
-        </div>
-      </div>
-      
-      <!-- Med eInfo Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="5" data-gs-y="0" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-plus" style="color: #6495ED;"></span>
-          <a href="http://www.medeinfo.com" target="_blank">Med eInfo</a>       
         </div>
       </div>
       
       <!-- PunchClock Shortcut -->
       <div class="grid-stack-item" 
-        data-gs-x="7" data-gs-y="0" data-gs-no-resize="yes"
+        data-gs-x="7" data-gs-y="2" data-gs-no-resize="yes"
         data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
           <span class="fa fa-clock-o" style="color: #717171;"></span>
@@ -91,105 +115,26 @@
         </div>
       </div>      
       
-      <!-- Helpdesk Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="9" data-gs-y="0" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-heartbeat fa-5x" style="color: red;"></span>
-          <a href="https://app.smartsheet.com/b/form?EQBCT=e3b3d4ec4834432aa4dad89973b27dc8" target="_blank">Helpdesk</a>
-        </div>
-      </div>
-      
-      <!-- Enertia Portal Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="1" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-coffee fa-5x" style="color: #5A3030;"></span>
-          <a href="http://portaldemo.enertiagroup.com" target="_blank">Enertia Portal</a>
-        </div>
-      </div>
-      
-      <!-- Eisai Portal Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="3" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-star-o fa-5x" style="color: #0000FF;"></span>
-          <a href="http://eisairepportal.enertiagroup.com/" target="_blank">Eisai Portal</a>
-        </div>
-      </div>
-      
-      <!-- Napsa Portal Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="5" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-user fa-5x" style="color: #0CE8E8;"></span>
-          <a href="http://napsaportal.enertiagroup.com/" target="_blank">Napsa Portal</a>
-        </div>
-      </div>
-      
-      <!-- Viiv Portal Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="7" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-bolt fa-5x" style="color: #FFFF00;"></span>
-          <a href="#">Viiv Portal</a>
-        </div>
-      </div>
-      
-      <!-- Bidding Component Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="9" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-money fa-5x"></span>
-          <a href="http://10.200.1.230:8085/Default.aspx" target="_blank">Bidding Component</a>
-        </div>
-      </div>
-      
-      <!-- Employee Handbook Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="1" data-gs-y="4" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-child fa-5x" style="color: #FFC0CB;"></span>
-          <a href="#">Employee Handbook</a>
-        </div>
-      </div>
-      
-      <!-- IT Manual Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="3" data-gs-y="4" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-certificate fa-5x" style="color: #FFD700;"></span>
-          <a href="#">IT Manual</a>
-        </div>
-      </div>
-      
       <!-- Feedback Shortcut -->
       <div class="grid-stack-item" 
         data-gs-x="5" data-gs-y="4" data-gs-no-resize="yes"
         data-gs-width="2" data-gs-height="2">
         <div class="grid-stack-item-content">
-          <span class="fa fa-comment fa-5x" style="color: #8A2BE2;"></span>
+          <span class="fa fa-commenting-o fa-5x" style="color: #000;"></span>
           <a href="https://app.smartsheet.com/b/form?EQBCT=f612200f68fd4cc6b7f752824a32d29d" target="_blank">Feedback</a>
         </div>
-      </div>      
+      </div>
       
     </div> <!-- End grid-stack div -->
     
   </div> <!-- End dashboard div -->
   
-    <div class="enertia">
-      <nav class="col-sm-3 hidden-xs">
-        <img alt="Enertia, LLC" src="img/official-logo.png" height="150px;" style="position: fixed; bottom: 25px;"/>
-      </nav>
-    </div>
+  <!-- Enertia Logo -->
+  <div class="enertia">
+    <nav class="col-sm-3 hidden-xs">
+      <img alt="Enertia, LLC" src="img/official-logo.png" height="50px;" style="position: fixed; bottom: 25px;"/>
+    </nav>
+  </div>
 
 <script type="text/javascript">
   $(function () {
@@ -205,6 +150,25 @@
   $(document).ready(function() {
     $('.responsive').responsiveText();
   });
+</script>
+
+<script>
+$(function() {
+	$('#show').avgrund({
+		height: 200,
+		holderClass: 'custom',
+		showClose: true,
+		showCloseText: 'Close',
+		enableStackAnimation: true,
+		onBlurContainer: '.container',
+		template: '<p>So implement your design and place content here! If you want to close modal, please hit "Esc", click somewhere on the screen or use special button.</p>' +
+		'<div>' +
+		'<a href="http://github.com/voronianski/jquery.avgrund.js" target="_blank" class="github">Avgrund on Github</a>' +
+		'<a href="http://twitter.com/voronianski" target="_blank" class="twitter">Twitter</a>' +
+		'<a href="http://dribbble.com/voronianski" target="_blank" class="dribble">Dribbble</a>' +
+		'</div>'
+	});
+});
 </script>
     
 </body>

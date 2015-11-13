@@ -6,6 +6,9 @@
     font-family: 'Indie Flower', cursive;
 }
 
+.header, .h1 {
+    margin-bottom: 60px;
+}
 .responsiveText-wrapper {
     font-weight: bold;
     font-size: 80px;
