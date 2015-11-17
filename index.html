@@ -12,8 +12,6 @@
   <link href='https://fonts.googleapis.com/css?family=Loved+by+the+King|Indie+Flower' rel='stylesheet' type='text/css'>
   <!-- Gridstack Stylesheet -->
   <link rel="stylesheet" href="css/gridstack.css">
-  <!-- Avgrund Styleshet http://labs.voronianski.com/jquery.avgrund.js/ -->
-  <link rel="stylesheet" href="css/avgrund.css">
   <!-- Enertia Dashboard Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
   
@@ -31,8 +29,6 @@
   <script src="js/gridstack.js"></script>
   <!-- responsiveText Library https://github.com/ghepting/jquery-responsive-text -->
   <script src="js/jquery.responsiveText.js"></script>
-  <!-- Avgrund Library for modal daily reminders -->
-  <script src="js/jquery.avgrund.min.js"></script>
   
 </head>
 <body>
@@ -132,7 +128,7 @@
   <!-- Enertia Logo -->
   <div class="enertia">
     <nav class="col-sm-3 hidden-xs">
-      <img alt="Enertia, LLC" src="img/official-logo.png" height="50px;" style="position: fixed; bottom: 25px;"/>
+      <img alt="Enertia, LLC" src="img/enertia-logo.png" height="50px;" style="position: fixed; bottom: 25px;"/>
     </nav>
   </div>
 
@@ -150,25 +146,6 @@
   $(document).ready(function() {
     $('.responsive').responsiveText();
   });
-</script>
-
-<script>
-$(function() {
-	$('#show').avgrund({
-		height: 200,
-		holderClass: 'custom',
-		showClose: true,
-		showCloseText: 'Close',
-		enableStackAnimation: true,
-		onBlurContainer: '.container',
-		template: '<p>So implement your design and place content here! If you want to close modal, please hit "Esc", click somewhere on the screen or use special button.</p>' +
-		'<div>' +
-		'<a href="http://github.com/voronianski/jquery.avgrund.js" target="_blank" class="github">Avgrund on Github</a>' +
-		'<a href="http://twitter.com/voronianski" target="_blank" class="twitter">Twitter</a>' +
-		'<a href="http://dribbble.com/voronianski" target="_blank" class="dribble">Dribbble</a>' +
-		'</div>'
-	});
-});
 </script>
     
 </body>
