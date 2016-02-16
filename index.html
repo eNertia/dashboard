@@ -5,123 +5,83 @@
   <title>Dashboard</title>
   
   <!-- Bootstrap Cascading Stylesheet -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
   <!-- Font Awesome Stylesheet https://fortawesome.github.io/Font-Awesome/ -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- Header font via Google Webfonts -->
-  <link href='https://fonts.googleapis.com/css?family=Loved+by+the+King|Indie+Flower' rel='stylesheet' type='text/css'>
-  <!-- Gridstack Stylesheet -->
-  <link rel="stylesheet" href="css/gridstack.css">
+  <link href='http://fonts.googleapis.com/css?family=Loved+by+the+King|Indie+Flower' rel='stylesheet' type='text/css'>
   <!-- Enertia Dashboard Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ie-style.css">
   
   <!-- jQuery Library http://jquery.com/ -->
-  <script src="js/jquery.min.js"></script>
-  <!-- jQuery User Interface Library http://jqueryui.com/ -->
-  <script src="js/jquery-ui.min.js"></script>
-  <!-- jQuery User Interface Touch Input Library https://github.com/furf/jquery-ui-touch-punch -->
-  <script src="js/jquery.ui.touch-punch.min.js"></script>
+  <!-- <script src="js/jquery.min.js"></script> -->
   <!-- Bootstrap Library http://getbootstrap.com/ -->
-  <script src="js/bootstrap.min.js"></script>  
-  <!-- lodash Library https://lodash.com/ -->
-  <script src="js/lodash.min.js"></script>
-  <!-- Gridstack Library http://troolee.github.io/gridstack.js/ -->
-  <script src="js/gridstack.js"></script>
+  <!-- <script src="js/bootstrap.min.js"></script>   -->
   <!-- responsiveText Library https://github.com/ghepting/jquery-responsive-text -->
-  <script src="js/jquery.responsiveText.js"></script>
+  <!-- <script src="js/jquery.responsiveText.js"></script> -->
+  <!-- Packery Grid Library - http://packery.metafizzy.co/ -->
+  <script src="js/packery.pkgd.min.js"></script>
+  <!-- Draggability Library - Required by Packery - http://draggabilly.desandro.com/ -->
+  <script src="js/draggabilly.pkgd.min.js"></script>
   
 </head>
 <body>
 
   <div class="dashboard">
-      
-    <!-- Aesthetics - Tree art by Paul Davey. -->
-    <div class="tree">
-      <nav class="col-sm-3 hidden-xs">
-        <img alt="Art by Paul Davey" src="img/tree.png"/>
-      </nav>
-    </div>
     
     <!-- Responsive Header -->
     <div class="header">
       <h1 class="responsive" data-compression="8" data-min="20" data-max="60">ENERTIA Tree</h1> 
-      <marquee behavior="scroll" direction="left" style="font-size: x-large;">ENERTIA will be closed November 26th and November 27th.</marquee>
+      <marquee behavior="scroll" direction="left" style="font-size: x-large;">Check out our new enertiagroup website!</marquee>
     </div>
     
-    <!-- GridStack Dashboard -->  
-    <div class="grid-stack" data-gs-width="12">
+    <!-- Start Grid Dashboard -->
+    
+    <div class="grid">
       
-      <!-- Enertia Website Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="3" data-gs-y="0" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
+      <!-- Enertiagroup Website -->
+      <div class="grid-item">
           <span class="fa fa-anchor fa-5x" style="color: #179A48;"></span>
           <a href="http://www.enertiagroup.com/" target="_blank">Enertia</a>
-        </div>
       </div>
       
       <!-- EGM Website Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="5" data-gs-y="0" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
+      <div class="grid-item">
           <span class="fa fa-suitcase fa-5x" style="color: #8A2BE2;"></span>
           <a href="http://www.egminc.net/" target="_blank">EGM</a>
-        </div>
       </div>
       
       <!-- Helpdesk Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="7" data-gs-y="0" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
+      <div class="grid-item">
           <span class="fa fa-heartbeat fa-5x" style="color: red;"></span>
           <a href="https://app.smartsheet.com/b/form?EQBCT=e3b3d4ec4834432aa4dad89973b27dc8" target="_blank">Helpdesk</a>
-        </div>
-      </div>      
+      </div>    
       
       <!-- CRMS Shortcut -->
-      <div class="grid-stack-item"
-        data-gs-x="3" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-rocket" style="color: #FFA500;"></span>
+      <div class="grid-item">
+          <span class="fa fa-rocket fa-5x" style="color: #FFA500;"></span>
           <a href="https://crms.enertiagroup.com" target="_blank">CRMS</a>
-        </div>
       </div>
       
       <!-- WMS Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="5" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-connectdevelop" style="color: #FF69B4;"></span>
-          <a href="https://wms.enertiagroup.com" target="_blank">WMS</a>            
-        </div>
+      <div class="grid-item">
+          <span class="fa fa-connectdevelop fa-5x" style="color: #FF69B4;"></span>
+          <a href="https://wms.enertiagroup.com" target="_blank">WMS</a>
       </div>
       
       <!-- PunchClock Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="7" data-gs-y="2" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-clock-o" style="color: #717171;"></span>
-          <a href="http://punchclock.enertiagroup.com" target="_blank">PunchClock</a>           
-        </div>
-      </div>      
-      
-      <!-- Feedback Shortcut -->
-      <div class="grid-stack-item" 
-        data-gs-x="5" data-gs-y="4" data-gs-no-resize="yes"
-        data-gs-width="2" data-gs-height="2">
-        <div class="grid-stack-item-content">
-          <span class="fa fa-commenting-o fa-5x" style="color: #000;"></span>
-          <a href="https://app.smartsheet.com/b/form?EQBCT=f612200f68fd4cc6b7f752824a32d29d" target="_blank">Feedback</a>
-        </div>
+      <div class="grid-item">
+          <span class="fa fa-clock-o fa-5x" style="color: #717171;"></span>
+          <a href="http://punchclock.enertiagroup.com" target="_blank">PunchClock</a>
       </div>
       
-    </div> <!-- End grid-stack div -->
+      <!-- Feedback Shortcut -->
+      <div class="grid-item">
+          <span class="fa fa-commenting-o fa-5x" style="color: #000;"></span>
+          <a href="https://app.smartsheet.com/b/form?EQBCT=f612200f68fd4cc6b7f752824a32d29d" target="_blank">Feedback</a>
+      </div>
+      
+    </div> <!-- End grid div -->
     
   </div> <!-- End dashboard div -->
   
@@ -132,20 +92,23 @@
     </nav>
   </div>
 
+<!-- Initialize ResponsiveText Library for Header -->
 <script type="text/javascript">
-  $(function () {
-    var options = {
-      width: 12,
-      animate: true,
-    };
-  $('.grid-stack').gridstack(options);
-  });
+  //$(document).ready(function() {
+  //  $('.responsive').responsiveText();
+  //});
 </script>
 
-<script type"text/javascript">
-  $(document).ready(function() {
-    $('.responsive').responsiveText();
-  });
+<!-- Packery Grid Scripts -->
+<script type="text/javascript">
+
+// Initialize Packery Library
+var elem = document.querySelector('.grid');
+var pckry = new Packery( elem, {
+  // options
+  itemSelector: '.grid-item',
+  gutter: 10
+});
 </script>
     
 </body>

@@ -1,0 +1,47 @@
+.header {
+    position: relative;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Indie Flower', cursive;
+}
+
+.header, .h1 {
+    margin-bottom: 60px;
+}
+.responsiveText-wrapper {
+    font-weight: bold;
+    font-size: 80px;
+}
+
+body {
+    background-image: url("../img/stripes.png");
+    background-repeat: repeat;
+    font-family: 'Loved by the King', cursive;
+    font-weight: bold;
+}
+
+.tree {
+    position: fixed;
+    bottom: 0px;
+    right: -25px;;
+}
+
+.grid-item {
+  float: left;
+  width: 120px;
+  height: 120px;
+  overflow: visible;
+  text-align: center;
+  display: block;
+  font-size: 35px;
+}
+
+.grid-item .fa {
+    font-size: 64px;
+    display: block;
+    margin: 20px 0 10px;
+}
+
+.grid-item--width2 { width: 120px; }
+.grid-item--height2 { height: 120px; }
